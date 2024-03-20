@@ -1,19 +1,33 @@
-# title = "Ghostbusters"
-# rank = 9
-# puts "#{title} has a rank of #{rank}."
-# puts "Mikey's favorite movie is #{title}.\nHe gives it a #{rank}!"
+class Movie
+  def initialize(title, rank = 5)
+    @title = title.capitalize
+    @rank = rank
+  end
 
-def emojis(emoji = "*", number)
-  emoji * number
+  def to_s
+    "#{@title} has a rank of #{@rank}"
+  end
+
+  def thunmbs_up
+    @rank += 1
+  end
+
+  def thunmbs_down
+    @rank -= 1
+  end
 end
 
-def movie_info(title, rank = title.length)
-  stars = emojis("*", rank)
-  "#{title.capitalize} has a rank of #{rank}: #{stars}"
-end
+movie_1 = Movie.new("goonies", 10)
+puts movie_1
+movie_1.thunmbs_up
+puts movie_1
+movie_1.thunmbs_up
+puts movie_1
 
-puts movie_info("goonies", 10)
-puts movie_info("Ghostbusters", 9)
+movie_2 = Movie.new("ghostbusters", 9)
+puts movie_2
+movie_2.thunmbs_down
+puts movie_2
 
-movie = "goldfinger"
-puts movie_info(movie)
+movie_3 = Movie.new("goldfinger")
+puts movie_3
