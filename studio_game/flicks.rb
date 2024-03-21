@@ -1,4 +1,7 @@
 class Movie
+  attr_reader :rank
+  attr_accessor :title
+
   def initialize(title, rank = 5)
     @title = title.capitalize
     @rank = rank
@@ -18,16 +21,21 @@ class Movie
 end
 
 movie_1 = Movie.new("goonies", 10)
-puts movie_1
-movie_1.thunmbs_up
-puts movie_1
-movie_1.thunmbs_up
-puts movie_1
+puts movie_1.title
+movie_1.title = "goonyes"
+puts movie_1.title
+puts movie_1.rank
 
-movie_2 = Movie.new("ghostbusters", 9)
-puts movie_2
-movie_2.thunmbs_down
-puts movie_2
+# puts movie_1
+# movie_1.thunmbs_up
+# puts movie_1
+# movie_1.thunmbs_up
+# puts movie_1
 
-movie_3 = Movie.new("goldfinger")
-puts movie_3
+# movie_2 = Movie.new("ghostbusters", 9)
+# puts movie_2
+# movie_2.thunmbs_down
+# puts movie_2
+
+# movie_3 = Movie.new("goldfinger")
+# puts movie_3
