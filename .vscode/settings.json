@@ -1,2 +1,7 @@
 {
+  "editor.formatOnSave": true,
+  "[ruby]": {
+    "editor.defaultFormatter": "nil",
+    "editor.formatOnSave": true
+  },
 }
